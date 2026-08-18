@@ -8,7 +8,12 @@ uploads/
 playwright-report/
 test-results/
 coverage/
+__pycache__/
+report.html
+requirements.txt
+venv/
 .env
+.venv
 .env.local
 *.db
 *.db-shm
@@ -17,8 +22,3 @@ coverage/
 npm-debug.log*
 .vscode/
 *.tsbuildinfo
-
-# Segurança — nunca commitar secrets
-pgbouncer.userlist.txt
-*.userlist.txt
-.env.example.local

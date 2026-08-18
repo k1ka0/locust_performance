@@ -1,0 +1,13 @@
+{
+  "new_post": {
+    "title": "Performance Test Title",
+    "body": "This is a sample body for performance testing.",
+    "userId": 1
+  },
+  "update_post": {
+    "id": 1,
+    "title": "Updated Title",
+    "body": "Updated content",
+    "userId": 1
+  }
+}
