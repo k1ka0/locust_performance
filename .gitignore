@@ -1,0 +1,24 @@
+node_modules/
+dist/
+build/
+!client/build/
+release/
+uploads/
+.DS_Store
+playwright-report/
+test-results/
+coverage/
+.env
+.env.local
+*.db
+*.db-shm
+*.db-wal
+*.log
+npm-debug.log*
+.vscode/
+*.tsbuildinfo
+
+# Segurança — nunca commitar secrets
+pgbouncer.userlist.txt
+*.userlist.txt
+.env.example.local
