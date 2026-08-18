@@ -45,3 +45,25 @@ class APIUser(HttpUser):
     def patch_post(self):
         """Simula uma atualização parcial (PATCH)."""
         self.client.patch("/posts/1", json={"title": "Partial Update"})
+
+    @task(1)
+    def delete_post(self):
+        """Simula a exclusão de um post (DELETE)."""
+        post_id = get_random_post_id()
+        self.client.delete(f"/posts/{post_id}")
+    @task(1)
+    def get_album_photos(self):
+        """Simula a busca de fotos em um álbum (Nested Route)."""
+        album_id = random.randint(1, 100)
+        self.client.get(f"/albums/{album_id}/photos")
+
+    @task(1)
+    def get_user_todos(self):
+        """Simula a busca de tarefas de um usuário (Nested Route)."""
+        user_id = random.randint(1, 100)
+        self.client.get(f"/users/{user_id}/todos")
+
+    @task(1)
+    def get_filtered_posts(self):
+        """Simula a listagem de posts filtrados por usuário (Query Param)."""
+        self.client.get("/posts?userId=1")
